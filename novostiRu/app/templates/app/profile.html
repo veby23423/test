@@ -1,0 +1,17 @@
+{% extends "base_novostiRu.html" %}
+{% block content_novostRu %}
+<main class="px-3">
+    <h1>Профиль</h1>
+    <p class="lead">Ваши данные</p>
+    <div class="alert alert-danger">
+        <p>Имя: {{ name }}</p>
+        <p>Почта: {{ email }}</p>
+        <p>Пороль: {{ passworld }}</p>
+    </div>
+    <p class="lead">
+        <a href="/setpassworld/" class="btn btn-lg btn-light fw-bold border-white bg-white">изменить пороль</a>
+        <a href="/setname/" class="btn btn-lg btn-light fw-bold border-white bg-white">изменить имя</a>
+        <a href="/setemail/" class="btn btn-lg btn-light fw-bold border-white bg-white">изменить почту</a>
+    </p>
+  </main>
+{% endblock %}

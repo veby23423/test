@@ -1,0 +1,11 @@
+{% extends "base_novostiRu.html" %}
+{% block content_novostRu %}
+<main role="main", class="inner cover" id="func">
+        <h1 class="cover-heading">Изменение имени</h1>
+        <form action="/name_update/" method="post">
+            {% csrf_token %}
+            <input type="text" name="name" id="newname" placeholder="Введите новое имя!" class="form-control"><br>
+            <button class="btn btn-warning">изменить</button>
+        </form>
+    </main>
+{% endblock %}

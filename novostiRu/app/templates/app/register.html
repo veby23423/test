@@ -1,0 +1,23 @@
+{% extends "base_form_reg.html" %}
+
+{% block content_reg %}
+<h1>Форма Регистрации</h1>
+  <div class="container">
+    <form action="/save_article/" method="post" class="contact-form">
+        {% csrf_token %}
+        <label for="name">Ваше имя</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Ваша почта</label>
+        <input type="text" id="email" name="email">
+
+        <label for="password">Ваш пороль</label>
+        <input type="text" id="password" name="passworld">
+
+        <input class="submit" value="Зарегистрироваться" type="submit">
+    </form>
+    <form action="/login" method="get" class="contact-form">
+      <input class="submit" value="Вход" type="submit">
+    </form>
+  </div>
+{% endblock %}

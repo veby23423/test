@@ -1,0 +1,16 @@
+{% extends "base_novostiRu.html" %}
+{% block content_novostRu %}
+<main class="px-3">
+    <h1>Главная страница.</h1>
+    <div class="alert alert-danger">
+      {% for s in all_statie %}
+        <h2>{{ s.title }}</h2>
+        <p>{{ s.anons }}</p>
+      <a href="/post/{{ s.id }}" class="btn btn-danger">Читать далее</a>
+      {% endfor %}
+    </div>
+    <p class="lead">
+      <a href="/setstate/" class="btn btn-lg btn-light fw-bold border-white bg-white">Дабавить статью</a>
+    </p>
+</main>
+{% endblock %}
